@@ -2,10 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-import UserPage from './UserPage';
 import AboutPage from './AboutPage';
 
-import './App.css';
+import './App.scss';
 
 export default function App() {
   return (
@@ -17,10 +16,7 @@ export default function App() {
         <Link to="/">Hello world</Link> - <Link to="/about">About</Link>
       </div>
       <Switch>
-        <Redirect exact from="/" to="/user/exon" />
-        <Route path="/user/:login" component={UserPage} />
         <Route path="/about" component={AboutPage} />
-        <Redirect to="/" />
       </Switch>
     </div>
   );
